@@ -1,34 +1,106 @@
-import java.util.Scanner;
 
-class Employee{
-    int id;
-    String firstName;
-    String lastName;
-    String address;
-    Employee(){
-        this(0, null, null, null);
-    }
-    Employee(int id, String firstName, String lastName, String address){
-        this.id=id;
-        this.firstName=firstName;
-        this.lastName = lastName;
-        this.address=address;
-    }
-    String getFullName(){
-        return firstName+" "+lastName;
-    }
-}
-class PS001{
-    public static void main(String[] args){
-        Scanner sc = new Scanner(System.in);
-        int id = 100;
-        String firstName = "SravanthiReddy"; 
-        String lastName = "Gangapuram";
-        String address = "Bodampahad";
-        Employee emp1 = new Employee();
-        System.out.println("Default constructor:\nFull name : "+emp1.getFullName());
-        Employee emp = new Employee(id, firstName, lastName, address);
-        System.out.println("Parameterized constructoer:\nFull name : "+emp.getFullName());
+       class Employee {
 
-    }
+	protected int id;
+	protected String firstName;
+	protected String lastName;
+	protected String address;
+	
+	public Employee(){}
+	
+	public Employee(int id, String firstName, String lastName, String address) {
+		super();
+		this.id = id;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.address = address;
+	}
+	
+	public String getFullName(){
+		return firstName+" "+lastName;
+	}
+	
+	public void sendMessage(){
+		System.out.println("Salary added successfully...");
+	}	
 }
+
+
+class FullTimeEmployee extends Employee{
+	
+	private double basic;
+	private double bonus;
+
+	public FullTimeEmployee(){
+  }
+
+	public FullTimeEmployee(int id, String firstName, String lastName, double basic, double bonus, String address) {
+		super(id,firstName, lastName,address);
+		this.basic = basic;
+		this.bonus = bonus;
+	}
+	
+	public double computeSal(){
+		return basic + bonus;
+	}
+	
+	public void showDetails(){
+		System.out.println("Id : " + id);
+		System.out.println("Name : " + getFullName());
+		System.out.println("Grand Total : " + computeSal());
+		System.out.println("Address : " + address);
+	}	
+	
+}
+
+
+
+class PartTimeEmployee extends Employee{
+
+	private double amountPerHour;
+	private int hoursWorked;
+	
+	public PartTimeEmployee(){}
+	
+	public PartTimeEmployee(int id, String firstName, String lastName, double amountPerHour, int hoursWorked,
+			String address) {
+		super(id,firstName, lastName,address);
+		this.amountPerHour = amountPerHour;
+		this.hoursWorked = hoursWorked;
+	}
+	
+	public double computeSal(){
+		return amountPerHour * hoursWorked;
+	}
+	
+	public void showDetails(){
+		System.out.println("Id : " + id);
+		System.out.println("Name : " + getFullName());
+		System.out.println("Grand Total : " + computeSal());
+		System.out.println("Address : " + address);
+	}	
+}
+
+
+
+public class PS001 {
+
+	public static void main(String[] args) {
+FullTimeEmployee fullTimeEmployee = new FullTimeEmployee(101,"SACHIN","TENDULKAR",6000,2000,"50-50, EAST, MUMBAI");
+		fullTimeEmployee.showDetails();
+		fullTimeEmployee.sendMessage();
+	
+		PartTimeEmployee partTimeEmployee = new PartTimeEmployee(102,"MS","DHONI",150,80,"20-20,WEST, MUMBAI");
+		partTimeEmployee.showDetails();
+		partTimeEmployee.sendMessage();
+	}
+}
+
+
+
+
+
+
+
+
+
