@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Demo20 {
+public class Demo019 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter the number of terms in the Fibonacci series: ");
