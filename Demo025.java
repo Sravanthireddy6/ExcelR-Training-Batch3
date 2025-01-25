@@ -9,7 +9,7 @@ class reverseString {
     }
 }
 
-class Demo25 {
+class Demo025 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter the string: ");
