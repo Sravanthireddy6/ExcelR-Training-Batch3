@@ -1,6 +1,6 @@
  import java.util.Scanner;
 
-public class Demo28{
+public class Demo028{
     public static void printFibonacci(int n) {
         if (n > 0) {
             printFibonacci(n - 1);  
