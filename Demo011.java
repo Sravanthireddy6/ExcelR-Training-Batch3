@@ -17,7 +17,7 @@ class Dog extends Animal {
         System.out.println(name + " says Woof!");
     }
 }
-public class Demo11 {
+public class Demo011 {
     public static void main(String[] args) {
         Animal animal = new Animal("Generic Animal");
         animal.makeSound();
