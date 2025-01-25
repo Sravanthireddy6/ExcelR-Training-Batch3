@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class SimpleUserCredentials{
+public class Demo005{
     // Sample user credentials stored in a simple way (username and password)
     private static final String STORED_USERNAME = "user001";
     private static final String STORED_PASSWORD = "user_001";
