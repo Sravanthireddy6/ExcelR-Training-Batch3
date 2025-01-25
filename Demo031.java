@@ -15,7 +15,7 @@ class HashSetDemo1 {
 }
 
 
-public class Demo31 {
+public class Demo031 {
 	public static void main(String[] args) {
 		HashSetDemo1 obj = new HashSetDemo1();
 		obj.HSetMethod();
