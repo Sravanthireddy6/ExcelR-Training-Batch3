@@ -13,7 +13,7 @@ class HashSetDemo2 {
 	
 }
 
-public class Demo32 {
+public class Demo032 {
     public static void main(String[] args) {
 		HashSetDemo2 obj = new HashSetDemo2();
         obj.HashsetMethod();
