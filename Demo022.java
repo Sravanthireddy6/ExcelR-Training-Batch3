@@ -18,7 +18,7 @@ class LeapYear {
     }
 }
 
-class Demo22 {
+class Demo022 {
     public static void main(String[] args) {
         LeapYear obj = new LeapYear();
         Scanner sc = new Scanner(System.in);
