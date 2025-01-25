@@ -20,7 +20,7 @@ class customer{
         System.out.println("Hello "+custname+"\nBank account number: "+bankaccno+"\nBalance: "+balance);
     }
 }
-public class Demo10 {
+public class Demo010 {
     public static void main(String[] args) {
         customer obj = new customer();
         obj.input();
