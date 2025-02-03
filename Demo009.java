@@ -1,5 +1,5 @@
  import java.util.Scanner;
- public class BankDetails {
+ public class Demo009 {
     String Cust_Name = "Sravanthi";
     long Account_no = 1234567890;
     Double Balance = 20000.00;
@@ -14,7 +14,7 @@
         System.out.println("ur balance is" +Balance);
     }
     public static void main(String[] args){
-        BankDetails obj = new BankDetails();
+        Demo009 obj = new Demo009();
         obj.accept_details();
         obj.Display_details();
     } 
